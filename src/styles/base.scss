@@ -1,9 +1,9 @@
 html {
-  @apply text-base overflow-x-hidden;
+  @apply overflow-x-hidden text-base;
 }
 
 body {
-  @apply bg-body bg-[url('/images/body-bg.svg')] bg-cover bg-no-repeat font-primary font-normal leading-relaxed text-text overflow-x-hidden;
+  @apply overflow-x-hidden bg-body bg-[url('/images/body-bg.svg')] bg-cover bg-no-repeat font-primary font-normal leading-relaxed text-text;
 }
 
 h1,
@@ -15,9 +15,8 @@ h6 {
   font-family: "font-secondary";
   font-weight: bold;
   line-height: tight;
-  color: #4338ca; /* Código hexadecimal para verde en Tailwind CSS */
+  color: #18181b; /* Código hexadecimal para verde en Tailwind CSS */
 }
-
 
 h1,
 .h1 {
