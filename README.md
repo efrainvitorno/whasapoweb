@@ -3,7 +3,7 @@
 <p align="center">Pinwheel es un tema SaaS multipropósito altamente personalizable creado con TailwindCSS.</p>
 
 <h2 align="centro">
-<a target="_blank" href="https://demo.themefisher.com/ CRM Whasapo Dev/" rel="nofollow">👀 Demostración</a> | <a target="_blank" href="">Velocidad de página (95+)🚀</a>
+<a target="_blank" href="https://demo.themefisher.com/ CRM WHASAPO/" rel="nofollow">👀 Demostración</a> | <a target="_blank" href="">Velocidad de página (95+)🚀</a>
 </h2>
 
 ![molinete](https://demo.themefisher.com/thumbnails/pinwheel.png)
@@ -24,14 +24,12 @@
 - 🔆 Iconos de fuentes impresionantes
 - 🔍 Compatible con SEO
 
-
-
 ## 🚀 Primeros pasos
 
 ### 📦 Dependencia
 
 - nodo v18+
--npm v9.5+
+  -npm v9.5+
 - trago v4+
 
 ### 👉 Instalación del paquete
@@ -56,8 +54,8 @@ compilación de ejecución npm
 
 ## 🐞 Informar problemas
 
-Usamos GitHub Issues como rastreador de errores oficial para esta plantilla. Busque [problemas existentes] (https://github.com/themefisher/CRM Whasapo Dev/issues). Es posible que alguien ya haya informado del mismo problema.
-Si su problema o idea aún no se ha abordado, no dude en [abrir una nueva edición](https://github.com/themefisher/CRM Whasapo Dev/issues).
+Usamos GitHub Issues como rastreador de errores oficial para esta plantilla. Busque [problemas existentes] (https://github.com/themefisher/CRM WHASAPO/issues). Es posible que alguien ya haya informado del mismo problema.
+Si su problema o idea aún no se ha abordado, no dude en [abrir una nueva edición](https://github.com/themefisher/CRM WHASAPO/issues).
 
 <!-- licencia -->
 
@@ -65,6 +63,6 @@ Si su problema o idea aún no se ha abordado, no dude en [abrir una nueva edici�
 
 Copyright (c) 2023 - Presente, diseñado y desarrollado por [Themefisher](https://themefisher.com/)
 
-**Licencia de código:** Publicada bajo la licencia [MIT](https://github.com./themefisher/CRM Whasapo Dev/blob/main/LICENSE).
+**Licencia de código:** Publicada bajo la licencia [MIT](https://github.com./themefisher/CRM WHASAPO/blob/main/LICENSE).
 
 **Licencia de imagen:** Las imágenes son sólo para fines de demostración. Tienen su licencia, no tenemos permiso para compartir esas imágenes.
