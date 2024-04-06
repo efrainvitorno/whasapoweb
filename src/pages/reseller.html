@@ -1,29 +1,9 @@
-<script>
-  function sendToWhatsApp() {
-    // Obtener los datos del formulario
-    const form = document.getElementById("crmForm");
-    const formData = new FormData(form);
-    let message = "";
-
-    // Recorrer los campos del formulario y construir el mensaje de WhatsApp
-    for (var pair of formData.entries()) {
-      message += pair[0] + ": " + pair[1] + "%0A"; // %0A para agregar un salto de línea en el mensaje de WhatsApp
-    }
-
-    // Número de WhatsApp al que se enviará el mensaje
-    const phoneNumber = 51999053124;
-
-    // Construir el enlace de WhatsApp con el mensaje y abrirlo en una nueva ventana
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappLink);
-  }
-</script>
-<!--Sección principal -->
+<!-- Sección principal -->
 <section class="section crmfree-single pt-0">
   <div class="container">
     <div class="row lg:gx-4">
       <div class="lg:col-8">
-        <form id="crmForm">
+        <form>
           <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12"></div>
             <div class="border-b border-gray-900/10 pb-12">
@@ -35,141 +15,143 @@
                 alianzas, ¡juntos construimos el futuro! 🌟🔗.
               </p>
               <div class="mt-10">
-                <div
-                  class="grid grid-cols-1 gap-y-6 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-8"
-                >
-                  <!-- Grupo 1 -->
-                  <div class="sm:col-span-1">
-                    <div class="relative">
-                      <input
-                        type="text"
-                        name="Nombre-Completo"
-                        id="Nombre-Completo"
-                        autocomplete="given-name"
-                        required
-                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        placeholder="Nombre Completo"
-                      />
+                <form action="#" method="POST">
+                  <div
+                    class="grid grid-cols-1 gap-y-6 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-8"
+                  >
+                    <!-- Grupo 1 -->
+                    <div class="sm:col-span-1">
+                      <div class="relative">
+                        <input
+                          type="text"
+                          name="Nombre-Completo"
+                          id="Nombre-Completo"
+                          autocomplete="given-name"
+                          required
+                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          placeholder="Nombre Completo"
+                        />
+                      </div>
                     </div>
-                  </div>
 
-                  <!-- Grupo 2 -->
-                  <div class="sm:col-span-1">
-                    <div class="relative">
-                      <input
-                        type="text"
-                        name="rubro"
-                        id="rubro"
-                        autocomplete="family-name"
-                        required
-                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        placeholder="Rubro del Negocio"
-                      />
+                    <!-- Grupo 2 -->
+                    <div class="sm:col-span-1">
+                      <div class="relative">
+                        <input
+                          type="text"
+                          name="rubro"
+                          id="rubro"
+                          autocomplete="family-name"
+                          required
+                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          placeholder="Rubro del Negocio"
+                        />
+                      </div>
                     </div>
-                  </div>
 
-                  <!-- Grupo 3 -->
-                  <div class="sm:col-span-1">
-                    <div class="relative">
-                      <select
-                        id="Cargo"
-                        name="Cargo"
-                        autocomplete="Cargo-name"
-                        required
-                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      >
-                        <option value="" disabled selected>
-                          Selecciona un cargo
-                        </option>
-                        <option>Gerente - CEO</option>
-                        <option>Desarrollador</option>
-                        <option>Dpt Ventas</option>
-                        <option>Marketing</option>
-                        <option>CTO</option>
-                        <option>Independiente</option>
-                        <option>Otros</option>
-                      </select>
+                    <!-- Grupo 3 -->
+                    <div class="sm:col-span-1">
+                      <div class="relative">
+                        <select
+                          id="Cargo"
+                          name="Cargo"
+                          autocomplete="Cargo-name"
+                          required
+                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                        >
+                          <option value="" disabled selected>
+                            Selecciona un cargo
+                          </option>
+                          <option>Gerente - CEO</option>
+                          <option>Desarrollador</option>
+                          <option>Dpt Ventas</option>
+                          <option>Marketing</option>
+                          <option>CTO</option>
+                          <option>Independiente</option>
+                          <option>Otros</option>
+                        </select>
+                      </div>
                     </div>
-                  </div>
 
-                  <!-- Grupo 4 -->
-                  <div class="sm:col-span-1">
-                    <div class="relative">
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        autocomplete="email"
-                        required
-                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        placeholder="Correo"
-                      />
+                    <!-- Grupo 4 -->
+                    <div class="sm:col-span-1">
+                      <div class="relative">
+                        <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          autocomplete="email"
+                          required
+                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          placeholder="Correo"
+                        />
+                      </div>
                     </div>
-                  </div>
 
-                  <!-- Grupo 5 -->
-                  <div class="sm:col-span-1">
-                    <div class="relative">
-                      <select
-                        id="pais"
-                        name="pais"
-                        autocomplete="pais"
-                        required
-                        class="block w-full appearance-none rounded-md border-0 py-1.5 pl-3 pr-10 leading-6 text-gray-900 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 sm:max-w-xs sm:text-sm"
-                      >
-                        <option value="" disabled selected>
-                          Selecciona un país
-                        </option>
-                        <option>🇲🇽 México</option>
-                        <option>🇨🇴 Colombia</option>
-                        <option>🇦🇷 Argentina</option>
-                        <option>🇪🇸 España</option>
-                        <option>🇵🇪 Perú</option>
-                        <option>🇧🇴 Bolivia</option>
-                        <option>🇨🇱 Chile</option>
-                        <option>🇪🇨 Ecuador</option>
-                        <option>🇬🇹 Guatemala</option>
-                        <option>🇸🇻 El Salvador</option>
-                        <option>🏳️ Otro pais (añadir cod de pais)</option>
-                        <!-- Puedes ajustar o agregar más opciones según sea necesario -->
-                      </select>
-                      <div
-                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-                      >
-                        <!-- Puedes agregar un ícono de flecha desplegable aquí si lo deseas -->
+                    <!-- Grupo 5 -->
+                    <div class="sm:col-span-1">
+                      <div class="relative">
+                        <select
+                          id="pais"
+                          name="pais"
+                          autocomplete="pais"
+                          required
+                          class="block w-full appearance-none rounded-md border-0 py-1.5 pl-3 pr-10 leading-6 text-gray-900 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600 sm:max-w-xs sm:text-sm"
+                        >
+                          <option value="" disabled selected>
+                            Selecciona un país
+                          </option>
+                          <option>🇲🇽 México</option>
+                          <option>🇨🇴 Colombia</option>
+                          <option>🇦🇷 Argentina</option>
+                          <option>🇪🇸 España</option>
+                          <option>🇵🇪 Perú</option>
+                          <option>🇧🇴 Bolivia</option>
+                          <option>🇨🇱 Chile</option>
+                          <option>🇪🇨 Ecuador</option>
+                          <option>🇬🇹 Guatemala</option>
+                          <option>🇸🇻 El Salvador</option>
+                          <option>🏳️ Otro pais (añadir cod de pais)</option>
+                          <!-- Puedes ajustar o agregar más opciones según sea necesario -->
+                        </select>
+                        <div
+                          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                        >
+                          <!-- Puedes agregar un ícono de flecha desplegable aquí si lo deseas -->
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Grupo 6 -->
+                    <div class="sm:col-span-1">
+                      <div class="relative">
+                        <input
+                          type="text"
+                          name="Whatsapp"
+                          id="Whatsapp"
+                          autocomplete="Whatsapp"
+                          required
+                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          placeholder="Whatsapp"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Grupo 7 -->
+                    <div class="sm:col-span-3">
+                      <div class="relative">
+                        <textarea
+                          id="Propuesta"
+                          name="Propuesta"
+                          rows="3"
+                          required
+                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          placeholder="Argumenta tu Propuesta"
+                        ></textarea>
                       </div>
                     </div>
                   </div>
-
-                  <!-- Grupo 6 -->
-                  <div class="sm:col-span-1">
-                    <div class="relative">
-                      <input
-                        type="text"
-                        name="Whatsapp"
-                        id="Whatsapp"
-                        autocomplete="Whatsapp"
-                        required
-                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        placeholder="Whatsapp"
-                      />
-                    </div>
-                  </div>
-
-                  <!-- Grupo 7 -->
-                  <div class="sm:col-span-3">
-                    <div class="relative">
-                      <textarea
-                        id="Propuesta"
-                        name="Propuesta"
-                        rows="3"
-                        required
-                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        placeholder="Argumenta tu Propuesta"
-                      ></textarea>
-                    </div>
-                  </div>
-                </div>
+                </form>
               </div>
 
               <div class="mt-10 flex items-start justify-between space-x-6">
@@ -183,13 +165,13 @@
                   </p>
 
                   <fieldset class="mt-6 space-y-6">
-                    <!-- Opciones de personalización del CRM -->
+                    
                   </fieldset>
                 </div>
 
                 <div class="w-1/2">
                   <h2 class="text-base font-semibold leading-7 text-gray-900">
-                    Customer Relationship Management (CRM)
+                    Customer Relationship Managemen (CRM)
                   </h2>
                   <p class="mt-1 text-sm leading-6 text-gray-600">
                     ofrece soluciones CRM Optimiza operaciones y mejora la
@@ -198,16 +180,15 @@
                   </p>
 
                   <fieldset class="mt-6 space-y-6">
-                    <!-- Opciones de CRM -->
+                    
+                    
                   </fieldset>
                 </div>
               </div>
               <div class="mt-6 flex items-center justify-center gap-x-6">
                 <div class="mt-6 flex items-center justify-center gap-x-6">
-                  <!-- Botón para enviar el formulario y abrir WhatsApp -->
                   <button
-                    type="button"
-                    onclick="sendToWhatsApp()"
+                    type="submit"
                     class="rounded-md bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Quiero mi CRM
@@ -231,31 +212,26 @@
         </div>
         <!--codigo-->
         <div class="flex items-start gap-2.5">
-          <img
-            class="h-8 w-8 rounded-full"
-            src="/docs/images/people/profile-picture-3.jpg"
-            alt="Jese image"
-          />
+          
           <div
             class="leading-1.5 flex w-full max-w-[320px] flex-col rounded-e-xl rounded-es-xl border-gray-200 bg-gray-100 p-4 dark:bg-gray-700"
           >
             <div class="flex items-center space-x-2 rtl:space-x-reverse">
               <span class="text-sm font-semibold text-gray-900 dark:text-white"
-                >Bonnie Green</span
+                >Soporte y Capacitación</span
               >
               <span class="text-sm font-normal text-gray-500 dark:text-gray-400"
-                >11:46</span
+                >siempre</span
               >
             </div>
             <p class="py-2.5 text-sm font-normal text-gray-900 dark:text-white">
-              Check out this open-source UI component library based on Tailwind
-              CSS:
+              🚀 Sesiones de Entrenamiento Especializadas: ¡Vuela alto con nuestro entrenamiento personalizado! Desde principiantes hasta expertos, ¡todos son bienvenidos! 🌟
             </p>
             <p class="pb-2.5 text-sm font-normal text-gray-900 dark:text-white">
               <a
-                href="https://github.com/themesberg/flowbite"
+                href="crmfree.html"
                 class="break-all font-medium text-blue-700 underline hover:no-underline dark:text-blue-500"
-                >https://github.com/themesberg/flowbite</a
+                >CRM GRATIS</a
               >
             </p>
             <a
@@ -263,20 +239,19 @@
               class="mb-2 rounded-xl bg-gray-50 p-4 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500"
             >
               <img
-                src="https://flowbite.com/docs/images/og-image.png"
+                src="images/crm.jpg"
                 class="mb-2 rounded-lg"
               />
               <span
                 class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >GitHub - themesberg/flowbite: The most popular and open source
-                libra ...</span
+                >GitHub - accede al repositorio y ten tu propio crm</span
               >
               <span class="text-xs font-normal text-gray-500 dark:text-gray-400"
-                >github.com</span
+                >whasapo.online</span
               >
             </a>
             <span class="text-sm font-normal text-gray-500 dark:text-gray-400"
-              >Delivered</span
+              >free</span
             >
           </div>
           <button
@@ -306,40 +281,7 @@
               class="py-2 text-sm text-gray-700 dark:text-gray-200"
               aria-labelledby="dropdownMenuIconButton"
             >
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Reply</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Forward</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Copy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Report</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Delete</a
-                >
+              
               </li>
             </ul>
           </div>
@@ -353,147 +295,10 @@
 
         <!-- ... (Contenido de la barra lateral) ... -->
         <div class="flex items-start gap-2.5">
-          <img
-            class="h-8 w-8 rounded-full"
-            src="/docs/images/people/profile-picture-3.jpg"
-            alt="Jese image"
-          />
-          <div class="flex flex-col gap-2.5">
-            <div class="flex items-center space-x-2 rtl:space-x-reverse">
-              <span class="text-sm font-semibold text-gray-900 dark:text-white"
-                >Bonnie Green</span
-              >
-              <span class="text-sm font-normal text-gray-500 dark:text-gray-400"
-                >11:46</span
-              >
-            </div>
-            <div class="leading-1.5 flex w-full max-w-[320px] flex-col">
-              <div
-                class="flex items-start rounded-xl bg-gray-50 p-2 dark:bg-gray-700"
-              >
-                <div class="me-2">
-                  <span
-                    class="flex items-center gap-2 pb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    <svg
-                      fill="none"
-                      aria-hidden="true"
-                      class="h-5 w-5 flex-shrink-0"
-                      viewBox="0 0 20 21"
-                    >
-                      <g clip-path="url(#clip0_3173_1381)">
-                        <path
-                          fill="#E2E5E7"
-                          d="M5.024.5c-.688 0-1.25.563-1.25 1.25v17.5c0 .688.562 1.25 1.25 1.25h12.5c.687 0 1.25-.563 1.25-1.25V5.5l-5-5h-8.75z"
-                        />
-                        <path
-                          fill="#B0B7BD"
-                          d="M15.024 5.5h3.75l-5-5v3.75c0 .688.562 1.25 1.25 1.25z"
-                        />
-                        <path
-                          fill="#CAD1D8"
-                          d="M18.774 9.25l-3.75-3.75h3.75v3.75z"
-                        />
-                        <path
-                          fill="#F15642"
-                          d="M16.274 16.75a.627.627 0 01-.625.625H1.899a.627.627 0 01-.625-.625V10.5c0-.344.281-.625.625-.625h13.75c.344 0 .625.281.625.625v6.25z"
-                        />
-                        <path
-                          fill="#fff"
-                          d="M3.998 12.342c0-.165.13-.345.34-.345h1.154c.65 0 1.235.435 1.235 1.269 0 .79-.585 1.23-1.235 1.23h-.834v.66c0 .22-.14.344-.32.344a.337.337 0 01-.34-.344v-2.814zm.66.284v1.245h.834c.335 0 .6-.295.6-.605 0-.35-.265-.64-.6-.64h-.834zM7.706 15.5c-.165 0-.345-.09-.345-.31v-2.838c0-.18.18-.31.345-.31H8.85c2.284 0 2.234 3.458.045 3.458h-1.19zm.315-2.848v2.239h.83c1.349 0 1.409-2.24 0-2.24h-.83zM11.894 13.486h1.274c.18 0 .36.18.36.355 0 .165-.18.3-.36.3h-1.274v1.049c0 .175-.124.31-.3.31-.22 0-.354-.135-.354-.31v-2.839c0-.18.135-.31.355-.31h1.754c.22 0 .35.13.35.31 0 .16-.13.34-.35.34h-1.455v.795z"
-                        />
-                        <path
-                          fill="#CAD1D8"
-                          d="M15.649 17.375H3.774V18h11.875a.627.627 0 00.625-.625v-.625a.627.627 0 01-.625.625z"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_3173_1381">
-                          <path
-                            fill="#fff"
-                            d="M0 0h20v20H0z"
-                            transform="translate(0 .5)"
-                          />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                    Flowbite Terms & Conditions
-                  </span>
-                  <span
-                    class="flex gap-2 text-xs font-normal text-gray-500 dark:text-gray-400"
-                  >
-                    12 Pages
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      class="self-center"
-                      width="3"
-                      height="4"
-                      viewBox="0 0 3 4"
-                      fill="none"
-                    >
-                      <circle cx="1.5" cy="2" r="1.5" fill="#6B7280" />
-                    </svg>
-                    18 MB
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      class="self-center"
-                      width="3"
-                      height="4"
-                      viewBox="0 0 3 4"
-                      fill="none"
-                    >
-                      <circle cx="1.5" cy="2" r="1.5" fill="#6B7280" />
-                    </svg>
-                    PDF
-                  </span>
-                </div>
-                <div class="inline-flex items-center self-center">
-                  <button
-                    class="inline-flex items-center self-center rounded-lg bg-gray-50 p-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-50 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
-                    type="button"
-                  >
-                    <svg
-                      class="h-4 w-4 text-gray-900 dark:text-white"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"
-                      />
-                      <path
-                        d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <span class="text-sm font-normal text-gray-500 dark:text-gray-400"
-              >Delivered</span
-            >
-          </div>
-        </div>
-        <!--separador -->
-        <div class="grid grid-cols-1 divide-y">
-          <div>.</div>
-          <div>.</div>
-          <div>.</div>
-        </div>
-        <!--contenido de barra lateral-->
-        <div class="flex items-start gap-2.5">
-          <img
-            class="h-8 w-8 rounded-full"
-            src="/docs/images/people/profile-picture-3.jpg"
-            alt="Jese image"
-          />
           <div class="flex w-full max-w-[320px] flex-col gap-1">
             <div class="flex items-center space-x-2 rtl:space-x-reverse">
               <span class="text-sm font-semibold text-gray-900 dark:text-white"
-                >Bonnie Green</span
+                >Potencia procesos con CRM</span
               >
               <span class="text-sm font-normal text-gray-500 dark:text-gray-400"
                 >11:46</span
@@ -503,13 +308,10 @@
               class="leading-1.5 flex flex-col rounded-e-xl rounded-es-xl border-gray-200 bg-gray-100 p-4 dark:bg-gray-700"
             >
               <p class="text-sm font-normal text-gray-900 dark:text-white">
-                That's awesome. I think our users will really appreciate the
-                improvements.
+                🕒 Respuestas en Tiempo Real: Gestiona interacciones como nunca
+                antes. Respuestas instantáneas para clientes felices. ⏰
               </p>
             </div>
-            <span class="text-sm font-normal text-gray-500 dark:text-gray-400"
-              >Delivered</span
-            >
           </div>
           <button
             id="dropdownMenuIconButton"
@@ -538,42 +340,62 @@
               class="py-2 text-sm text-gray-700 dark:text-gray-200"
               aria-labelledby="dropdownMenuIconButton"
             >
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Reply</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Forward</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Copy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Report</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >Delete</a
-                >
-              </li>
-            </ul>
+              
+          </div>
+        </div>
+        <!--separador -->
+        <div class="grid grid-cols-1 divide-y">
+          <div>.</div>
+          <div>.</div>
+          <div>.</div>
+        </div>
+        <!--contenido de barra lateral-->
+        <div class="flex items-start gap-2.5">
+          <div class="flex w-full max-w-[320px] flex-col gap-1">
+            <div class="flex items-center space-x-2 rtl:space-x-reverse">
+              <span class="text-sm font-semibold text-gray-900 dark:text-white"
+                >Personalización y Marca Blanca</span
+              >
+              <span class="text-sm font-normal text-gray-500 dark:text-gray-400"
+                >disponible</span
+              >
+            </div>
+            <div
+              class="leading-1.5 flex flex-col rounded-e-xl rounded-es-xl border-gray-200 bg-gray-100 p-4 dark:bg-gray-700"
+            >
+              <p class="text-sm font-normal text-gray-900 dark:text-white">
+                🎨 Diseño a Tu Estilo: Personaliza la interfaz del CRM para que refleje la identidad de tu marca. ¡Colores, logotipos y más, todo a tu gusto! 🚀
+              </p>
+            </div>
+          </div>
+          <button
+            id="dropdownMenuIconButton"
+            data-dropdown-toggle="dropdownDots"
+            data-dropdown-placement="bottom-start"
+            class="inline-flex items-center self-center rounded-lg bg-white p-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-50 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800 dark:focus:ring-gray-600"
+            type="button"
+          >
+            <svg
+              class="h-4 w-4 text-gray-500 dark:text-gray-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 4 15"
+            >
+              <path
+                d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
+              />
+            </svg>
+          </button>
+          <div
+            id="dropdownDots"
+            class="z-10 hidden w-40 divide-y divide-gray-100 rounded-lg bg-white shadow dark:divide-gray-600 dark:bg-gray-700"
+          >
+            <ul
+              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownMenuIconButton"
+            >
+              
           </div>
         </div>
         <!--contenido barra lateral-->
